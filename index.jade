@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title Form Validation
+
+    //- bootstrap with bootswatch 'Flatly' stylesheet
+    link(rel='stylesheet' href='lib/bootstrap/css/bootstrap.min.css')
+
+    //- font-awesome stylesheet
+    link(rel='stylesheet' href='lib/font-awesome/css/font-awesome.min.css')
+
+  body
+    .container
+      h1 Form Validation
+
+      .row
+        form.form-horizontal
+          .form-group
+            label.col-sm-2.control-label(for"name") Name
+            .col-sm-8
+              input.form-control#name(type="text" placeholder="Name")
+          .form-group
+            label.col-sm-2.control-label(for"email") Email
+            .col-sm-8
+              input.form-control#name(type="text" placeholder="Email")
+          .form-group
+            label.col-sm-2.control-label(for"enquiry") Enquiry
+            .col-sm-8
+              textarea.form-control#enquiry(
+                rows="3" 
+                placeholder="Enter your questions here."
+              )
+          .form-group
+            .col-sm-offset-2.col-sm-8
+              button.btn.btn-default(type="submit") Submit
+
+    script(src='form.js')
+
